@@ -1,6 +1,7 @@
 # Hypixel Skyblock Minion Calculator
 
 A web application that calculates both the crafting costs (materials needed to craft/upgrade minions) and production value (items produced over time and their market value) for Hypixel Skyblock minions.
+Link to view on the web -= https://RyMonrose.github.io/hypixel-minion-calculator/
 
 ## Features
 
@@ -160,4 +161,5 @@ Potential improvements:
 - Historical price tracking
 - Export results to CSV
 - Comparison between multiple minions
+
 
