@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hypixel Skyblock Minion Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Hypixel Skyblock Minion Calculator</h1>
+            <p>Calculate crafting costs and production value for your minions</p>
+        </header>
+
+        <div class="calculator-section">
+            <div class="input-section">
+                <div class="input-group">
+                    <label for="minion-select">Minion Type:</label>
+                    <select id="minion-select">
+                        <option value="">Select a minion...</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <label for="tier-select">Tier:</label>
+                    <select id="tier-select">
+                        <option value="">Select tier...</option>
+                        <option value="1">Tier I</option>
+                        <option value="2">Tier II</option>
+                        <option value="3">Tier III</option>
+                        <option value="4">Tier IV</option>
+                        <option value="5">Tier V</option>
+                        <option value="6">Tier VI</option>
+                        <option value="7">Tier VII</option>
+                        <option value="8">Tier VIII</option>
+                        <option value="9">Tier IX</option>
+                        <option value="10">Tier X</option>
+                        <option value="11">Tier XI</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <label for="time-period">Production Time Period (hours):</label>
+                    <input type="number" id="time-period" min="0" step="0.5" value="24" placeholder="24">
+                </div>
+
+                <button id="calculate-btn" class="calculate-button">Calculate</button>
+            </div>
+
+            <div class="results-section">
+                <div class="result-card" id="crafting-recipe-card">
+                    <h2>Crafting Recipe</h2>
+                    <div id="crafting-recipe-content" class="result-content">
+                        <p class="placeholder">Select a minion and tier to see the crafting recipe</p>
+                    </div>
+                </div>
+
+                <div class="result-card" id="crafting-cost-card">
+                    <h2>Crafting Costs</h2>
+                    <div id="crafting-cost-content" class="result-content">
+                        <p class="placeholder">Select a minion and tier to see crafting costs</p>
+                    </div>
+                </div>
+
+                <div class="result-card" id="production-value-card">
+                    <h2>Production Value</h2>
+                    <div id="production-value-content" class="result-content">
+                        <p class="placeholder">Select a minion, tier, and time period to see production value</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="loading" class="loading hidden">
+            <div class="spinner"></div>
+            <p>Loading prices...</p>
+        </div>
+
+        <div id="error" class="error hidden"></div>
+    </div>
+
+    <script src="minionData.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
+
