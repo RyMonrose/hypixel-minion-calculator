@@ -1,7 +1,6 @@
 # Hypixel Skyblock Minion Calculator
 
 A web application that calculates both the crafting costs (materials needed to craft/upgrade minions) and production value (items produced over time and their market value) for Hypixel Skyblock minions.
-Link to view on the web -= https://RyMonrose.github.io/hypixel-minion-calculator/
 
 ## Features
 
@@ -44,6 +43,7 @@ The calculator supports **60+ minions** across all categories:
 
 ## API Notes
 
+### Price Data
 The application uses the official Hypixel Bazaar API (`https://api.hypixel.net/skyblock/bazaar`) to fetch item prices. This API:
 - Does not require an API key
 - Provides real-time Bazaar prices for all items
@@ -54,6 +54,17 @@ The application uses the official Hypixel Bazaar API (`https://api.hypixel.net/s
 - The item might not be available on the Bazaar
 - Check the browser console (F12) for detailed error messages
 - Some items may need to be looked up by their exact product ID
+
+### Recipe Data
+**Important**: Minion recipe data is currently stored locally because:
+- **No official Hypixel API** provides minion crafting recipes
+- Community APIs don't reliably provide complete recipe data
+- Recipes may change with game updates
+
+The application attempts to fetch recipe data from available sources but falls back to local data. If you notice incorrect recipe amounts:
+1. Verify the correct amounts in-game or on the [Hypixel Wiki](https://wiki.hypixel.net/Minions)
+2. See `DATA_CORRECTIONS.md` for instructions on updating recipes
+3. Consider contributing corrections to help improve accuracy
 
 ## File Structure
 
@@ -161,5 +172,4 @@ Potential improvements:
 - Historical price tracking
 - Export results to CSV
 - Comparison between multiple minions
-
 

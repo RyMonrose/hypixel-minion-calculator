@@ -23,24 +23,34 @@ function convertToProductID(itemName) {
     const mappings = {
         'Sugar Cane': 'SUGAR_CANE',
         'Enchanted Sugar Cane': 'ENCHANTED_SUGAR',
+        'Enchanted Sugar Cane Block': 'ENCHANTED_SUGAR_CANE',
         'Potato': 'POTATO_ITEM',
         'Enchanted Potato': 'ENCHANTED_POTATO',
+        'Enchanted Potato Block': 'ENCHANTED_POTATO',
         'Cobblestone': 'COBBLESTONE',
         'Enchanted Cobblestone': 'ENCHANTED_COBBLESTONE',
+        'Enchanted Cobblestone Block': 'ENCHANTED_COBBLESTONE',
         'Bone': 'BONE',
         'Enchanted Bone': 'ENCHANTED_BONE',
+        'Enchanted Bone Block': 'ENCHANTED_BONE',
         'Obsidian': 'OBSIDIAN',
         'Enchanted Obsidian': 'ENCHANTED_OBSIDIAN',
+        'Enchanted Obsidian Block': 'ENCHANTED_OBSIDIAN',
         'Wheat': 'WHEAT',
         'Enchanted Hay Bale': 'ENCHANTED_HAY_BLOCK',
+        'Enchanted Hay Bale Block': 'ENCHANTED_HAY_BLOCK',
         'Carrot': 'CARROT_ITEM',
         'Enchanted Carrot': 'ENCHANTED_CARROT',
+        'Enchanted Carrot Block': 'ENCHANTED_CARROT',
         'Coal': 'COAL',
         'Enchanted Coal': 'ENCHANTED_COAL',
+        'Enchanted Coal Block': 'ENCHANTED_COAL_BLOCK',
         'Iron Ingot': 'IRON_INGOT',
         'Enchanted Iron': 'ENCHANTED_IRON',
+        'Enchanted Iron Block': 'ENCHANTED_IRON_BLOCK',
         'Gold Ingot': 'GOLD_INGOT',
         'Enchanted Gold': 'ENCHANTED_GOLD',
+        'Enchanted Gold Block': 'ENCHANTED_GOLD_BLOCK',
         'Wooden Hoe': 'WOOD_HOE',
         'Wooden Pickaxe': 'WOOD_PICKAXE',
         'Wooden Sword': 'WOOD_SWORD',
@@ -48,78 +58,115 @@ function convertToProductID(itemName) {
         'Wooden Shovel': 'WOOD_SPADE',
         'Pumpkin': 'PUMPKIN',
         'Enchanted Pumpkin': 'ENCHANTED_PUMPKIN',
+        'Enchanted Pumpkin Block': 'ENCHANTED_PUMPKIN',
         'Melon': 'MELON',
         'Enchanted Melon': 'ENCHANTED_MELON',
+        'Enchanted Melon Block': 'ENCHANTED_MELON',
         'Mushroom': 'MUSHROOM',
         'Enchanted Mushroom': 'ENCHANTED_MUSHROOM',
+        'Enchanted Mushroom Block': 'ENCHANTED_MUSHROOM',
         'Cocoa Beans': 'INK_SACK:3',
         'Enchanted Cocoa Bean': 'ENCHANTED_COCOA',
+        'Enchanted Cocoa Bean Block': 'ENCHANTED_COCOA',
         'Cactus': 'CACTUS',
         'Enchanted Cactus Green': 'ENCHANTED_CACTUS_GREEN',
+        'Enchanted Cactus Green Block': 'ENCHANTED_CACTUS_GREEN',
         'Nether Wart': 'NETHER_STALK',
         'Enchanted Nether Wart': 'ENCHANTED_NETHER_STALK',
+        'Enchanted Nether Wart Block': 'ENCHANTED_NETHER_STALK',
         'Raw Beef': 'RAW_BEEF',
         'Enchanted Raw Beef': 'ENCHANTED_RAW_BEEF',
+        'Enchanted Raw Beef Block': 'ENCHANTED_RAW_BEEF',
         'Raw Porkchop': 'PORK',
         'Enchanted Pork': 'ENCHANTED_PORK',
+        'Enchanted Pork Block': 'ENCHANTED_PORK',
         'Raw Chicken': 'RAW_CHICKEN',
         'Enchanted Raw Chicken': 'ENCHANTED_RAW_CHICKEN',
+        'Enchanted Raw Chicken Block': 'ENCHANTED_RAW_CHICKEN',
         'Mutton': 'MUTTON',
         'Enchanted Mutton': 'ENCHANTED_MUTTON',
+        'Enchanted Mutton Block': 'ENCHANTED_MUTTON',
         'Raw Rabbit': 'RABBIT',
         'Enchanted Rabbit': 'ENCHANTED_RABBIT',
+        'Enchanted Rabbit Block': 'ENCHANTED_RABBIT',
         'Diamond': 'DIAMOND',
         'Enchanted Diamond': 'ENCHANTED_DIAMOND',
+        'Enchanted Diamond Block': 'ENCHANTED_DIAMOND_BLOCK',
         'Lapis Lazuli': 'INK_SACK:4',
         'Enchanted Lapis Lazuli': 'ENCHANTED_LAPIS_LAZULI',
+        'Enchanted Lapis Lazuli Block': 'ENCHANTED_LAPIS_LAZULI_BLOCK',
         'Emerald': 'EMERALD',
         'Enchanted Emerald': 'ENCHANTED_EMERALD',
+        'Enchanted Emerald Block': 'ENCHANTED_EMERALD_BLOCK',
         'Redstone': 'REDSTONE',
         'Enchanted Redstone': 'ENCHANTED_REDSTONE',
+        'Enchanted Redstone Block': 'ENCHANTED_REDSTONE_BLOCK',
         'Nether Quartz': 'QUARTZ',
         'Enchanted Quartz': 'ENCHANTED_QUARTZ',
+        'Enchanted Quartz Block': 'ENCHANTED_QUARTZ_BLOCK',
         'Glowstone Dust': 'GLOWSTONE_DUST',
         'Enchanted Glowstone Dust': 'ENCHANTED_GLOWSTONE_DUST',
+        'Enchanted Glowstone Block': 'ENCHANTED_GLOWSTONE',
         'Gravel': 'GRAVEL',
         'Enchanted Flint': 'ENCHANTED_FLINT',
+        'Enchanted Flint Block': 'ENCHANTED_FLINT',
         'Ice': 'ICE',
         'Enchanted Ice': 'ENCHANTED_ICE',
+        'Enchanted Ice Block': 'ENCHANTED_ICE',
         'Sand': 'SAND',
         'Enchanted Sand': 'ENCHANTED_SAND',
+        'Enchanted Sand Block': 'ENCHANTED_SAND',
         'Rotten Flesh': 'ROTTEN_FLESH',
         'Enchanted Rotten Flesh': 'ENCHANTED_ROTTEN_FLESH',
+        'Enchanted Rotten Flesh Block': 'ENCHANTED_ROTTEN_FLESH',
         'String': 'STRING',
         'Enchanted String': 'ENCHANTED_STRING',
+        'Enchanted String Block': 'ENCHANTED_STRING',
         'Gunpowder': 'SULPHUR',
         'Enchanted Gunpowder': 'ENCHANTED_GUNPOWDER',
+        'Enchanted Gunpowder Block': 'ENCHANTED_GUNPOWDER',
         'Ender Pearl': 'ENDER_PEARL',
         'Enchanted Ender Pearl': 'ENCHANTED_ENDER_PEARL',
+        'Enchanted Ender Pearl Block': 'ENCHANTED_ENDER_PEARL',
         'Ghast Tear': 'GHAST_TEAR',
         'Enchanted Ghast Tear': 'ENCHANTED_GHAST_TEAR',
+        'Enchanted Ghast Tear Block': 'ENCHANTED_GHAST_TEAR',
         'Slimeball': 'SLIME_BALL',
         'Enchanted Slimeball': 'ENCHANTED_SLIME_BALL',
+        'Enchanted Slimeball Block': 'ENCHANTED_SLIME_BLOCK',
         'Blaze Rod': 'BLAZE_ROD',
         'Enchanted Blaze Powder': 'ENCHANTED_BLAZE_POWDER',
+        'Enchanted Blaze Powder Block': 'ENCHANTED_BLAZE_POWDER',
         'Magma Cream': 'MAGMA_CREAM',
         'Enchanted Magma Cream': 'ENCHANTED_MAGMA_CREAM',
+        'Enchanted Magma Cream Block': 'ENCHANTED_MAGMA_CREAM',
         'Oak Wood': 'LOG',
         'Enchanted Oak Wood': 'ENCHANTED_OAK_LOG',
+        'Enchanted Oak Wood Block': 'ENCHANTED_OAK_LOG',
         'Spruce Wood': 'LOG:1',
         'Enchanted Spruce Wood': 'ENCHANTED_SPRUCE_LOG',
+        'Enchanted Spruce Wood Block': 'ENCHANTED_SPRUCE_LOG',
         'Birch Wood': 'LOG:2',
         'Enchanted Birch Wood': 'ENCHANTED_BIRCH_LOG',
+        'Enchanted Birch Wood Block': 'ENCHANTED_BIRCH_LOG',
         'Dark Oak Wood': 'LOG_2:1',
         'Enchanted Dark Oak Wood': 'ENCHANTED_DARK_OAK_LOG',
+        'Enchanted Dark Oak Wood Block': 'ENCHANTED_DARK_OAK_LOG',
         'Acacia Wood': 'LOG_2',
         'Enchanted Acacia Wood': 'ENCHANTED_ACACIA_LOG',
+        'Enchanted Acacia Wood Block': 'ENCHANTED_ACACIA_LOG',
         'Jungle Wood': 'LOG:3',
         'Enchanted Jungle Wood': 'ENCHANTED_JUNGLE_LOG',
+        'Enchanted Jungle Wood Block': 'ENCHANTED_JUNGLE_LOG',
         'Raw Fish': 'RAW_FISH',
         'Enchanted Raw Fish': 'ENCHANTED_RAW_FISH',
+        'Enchanted Raw Fish Block': 'ENCHANTED_RAW_FISH',
         'Clay': 'CLAY_BALL',
         'Enchanted Clay': 'ENCHANTED_CLAY',
+        'Enchanted Clay Block': 'ENCHANTED_CLAY',
         'Dandelion': 'YELLOW_FLOWER',
-        'Enchanted Dandelion': 'ENCHANTED_DANDELION'
+        'Enchanted Dandelion': 'ENCHANTED_DANDELION',
+        'Enchanted Dandelion Block': 'ENCHANTED_DANDELION'
     };
     
     if (mappings[itemName]) {
@@ -278,7 +325,9 @@ async function calculateCraftingCosts(minionName, tier) {
     let totalCost = 0;
     const materialCosts = [];
 
-    // Add tool cost
+    // Add tool cost (tools are not on bazaar, use NPC price or skip)
+    // Basic tools are typically very cheap from NPCs (1-10 coins)
+    // We'll note this but not include in total since they're negligible
     const toolPrice = prices[minion.tool] || 0;
     if (toolPrice) {
         materialCosts.push({
@@ -288,6 +337,16 @@ async function calculateCraftingCosts(minionName, tier) {
             total: toolPrice
         });
         totalCost += toolPrice;
+    } else {
+        // Tools aren't on bazaar - they're NPC items (usually 1-10 coins)
+        // Add a note but don't include in cost calculation
+        materialCosts.push({
+            item: minion.tool,
+            amount: 1,
+            price: 0,
+            total: 0,
+            note: "NPC item (not on Bazaar)"
+        });
     }
 
     // Add material costs
@@ -347,7 +406,7 @@ async function calculateProductionValue(minionName, tier, hours) {
 }
 
 // Display crafting recipe
-function displayCraftingRecipe(minionName, tier) {
+async function displayCraftingRecipe(minionName, tier) {
     const recipeContent = document.getElementById('crafting-recipe-content');
     const minion = getMinionData(minionName);
     
@@ -356,7 +415,10 @@ function displayCraftingRecipe(minionName, tier) {
         return;
     }
 
+    // Get recipe from local data (MinionAH API doesn't provide recipe data - returns 404)
     const recipe = minion.recipes[parseInt(tier)];
+    const isFallback = true; // Always using local data since no API available
+    
     if (!recipe) {
         recipeContent.innerHTML = '<p class="placeholder">Recipe not available for this tier</p>';
         return;
@@ -405,19 +467,36 @@ function displayCraftingRecipe(minionName, tier) {
         
         // Fill surrounding slots with materials
         const material = recipe[0]; // Usually one material type per tier
-        const itemsPerSlot = Math.floor(material.amount / 8);
-        const remainder = material.amount % 8;
         
-        const surroundingSlots = [0, 1, 2, 3, 5, 6, 7, 8];
-        surroundingSlots.forEach((slotIndex, idx) => {
-            const amount = itemsPerSlot + (idx < remainder ? 1 : 0);
-            grid[slotIndex] = { 
-                item: material.item, 
-                amount: amount,
-                totalAmount: material.amount,
-                isMaterial: true
-            };
-        });
+        // For small amounts (1-8), place them in specific slots
+        // For larger amounts, distribute evenly across all 8 slots
+        if (material.amount <= 8) {
+            // Place items in specific slots (top row, then left, then right, then bottom)
+            const placementOrder = [1, 3, 5, 7, 0, 2, 6, 8]; // Center positions first, then corners
+            for (let i = 0; i < material.amount && i < 8; i++) {
+                grid[placementOrder[i]] = { 
+                    item: material.item, 
+                    amount: 1,
+                    totalAmount: material.amount,
+                    isMaterial: true
+                };
+            }
+        } else {
+            // For larger amounts, distribute evenly
+            const itemsPerSlot = Math.floor(material.amount / 8);
+            const remainder = material.amount % 8;
+            
+            const surroundingSlots = [0, 1, 2, 3, 5, 6, 7, 8];
+            surroundingSlots.forEach((slotIndex, idx) => {
+                const amount = itemsPerSlot + (idx < remainder ? 1 : 0);
+                grid[slotIndex] = { 
+                    item: material.item, 
+                    amount: amount,
+                    totalAmount: material.amount,
+                    isMaterial: true
+                };
+            });
+        }
     }
 
     // Render the grid
@@ -433,9 +512,22 @@ function displayCraftingRecipe(minionName, tier) {
                 displayName = displayName.substring(0, 12) + '...';
             }
             
-            html += `<div class="crafting-slot has-item" title="${slot.item}">
+            // Show amount per slot if it's a material slot
+            let amountDisplay = '';
+            if (slot.isMaterial) {
+                if (slot.amount && slot.amount > 0) {
+                    // Show amount per slot (for distributed items)
+                    amountDisplay = `<div class="item-amount">${formatNumber(slot.amount)}</div>`;
+                } else if (slot.totalAmount && slot.totalAmount <= 8 && slot.totalAmount > 1) {
+                    // For small amounts (2-8), show total in tooltip, amount per slot in display
+                    // Each slot gets 1 item when total is small
+                    amountDisplay = `<div class="item-amount">1</div>`;
+                }
+            }
+            
+            html += `<div class="crafting-slot has-item" title="${slot.item}${slot.totalAmount ? ' (' + formatNumber(slot.totalAmount) + ' total)' : ''}">
                 <div class="item-name">${displayName}</div>
-                ${slot.totalAmount && slot.totalAmount > 1 ? `<div class="item-amount">${formatNumber(slot.totalAmount)} total</div>` : ''}
+                ${amountDisplay}
             </div>`;
         } else {
             html += '<div class="crafting-slot empty"></div>';
@@ -454,11 +546,23 @@ function displayCraftingRecipe(minionName, tier) {
     // Add recipe info
     html += '<div class="recipe-info">';
     if (isTier1) {
-        html += `<p><strong>Crafting:</strong> Place ${minion.tool} in center, surround with ${recipe[0].amount}x ${recipe[0].item}</p>`;
+        const itemsPerSlot = Math.floor(recipe[0].amount / 8);
+        html += `<p><strong>Crafting:</strong> Place ${minion.tool} in center, surround with ${recipe[0].amount}x ${recipe[0].item} (${itemsPerSlot} per slot)</p>`;
     } else {
         const prevTier = parseInt(tier) - 1;
-        html += `<p><strong>Upgrade:</strong> Place Tier ${getRomanNumeral(prevTier)} minion in center, add ${recipe[0].amount}x ${recipe[0].item}</p>`;
+        if (recipe[0].amount <= 8) {
+            html += `<p><strong>Upgrade:</strong> Place Tier ${getRomanNumeral(prevTier)} minion in center, add ${recipe[0].amount}x ${recipe[0].item}</p>`;
+        } else {
+            const itemsPerSlot = Math.floor(recipe[0].amount / 8);
+            html += `<p><strong>Upgrade:</strong> Place Tier ${getRomanNumeral(prevTier)} minion in center, add ${recipe[0].amount}x ${recipe[0].item} (${itemsPerSlot} per slot)</p>`;
+        }
     }
+    
+    // Add warning if using fallback data
+    if (isFallback) {
+        html += '<p style="margin-top: 10px; color: #e74c3c; font-size: 0.85em;"><strong>⚠ Note:</strong> Using local recipe data. If amounts seem incorrect, recipes may need updating. Please verify in-game or on the Hypixel Wiki.</p>';
+    }
+    
     html += '</div>';
 
     html += '</div>'; // Close crafting-recipe-container
@@ -484,10 +588,16 @@ function displayCraftingCosts(costData) {
 
     let hasUnavailablePrices = false;
     costData.materials.forEach(material => {
-        const priceDisplay = material.price ? formatCoins(material.price) + ' coins' : 'Price unavailable';
-        const totalDisplay = material.total ? formatCoins(material.total) + ' coins' : 'N/A';
+        let priceDisplay = material.price ? formatCoins(material.price) + ' coins' : 'Price unavailable';
+        let totalDisplay = material.total ? formatCoins(material.total) + ' coins' : 'N/A';
         
-        if (!material.price) {
+        // Handle NPC items (tools)
+        if (material.note) {
+            priceDisplay = material.note;
+            totalDisplay = '~1-10 coins (NPC)';
+        }
+        
+        if (!material.price && !material.note) {
             hasUnavailablePrices = true;
         }
         
@@ -590,8 +700,8 @@ async function performCalculation() {
     errorDiv.classList.add('hidden');
 
     try {
-        // Display crafting recipe immediately (no API call needed)
-        displayCraftingRecipe(minionName, tier);
+        // Display crafting recipe (may fetch from API)
+        await displayCraftingRecipe(minionName, tier);
 
         // Calculate both crafting costs and production value
         const [craftingCosts, productionValue] = await Promise.all([

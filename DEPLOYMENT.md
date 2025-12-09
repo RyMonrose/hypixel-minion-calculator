@@ -41,7 +41,7 @@ This guide will help you host this application on GitHub Pages so others can use
    - Under "Source", select "Deploy from a branch"
    - Branch: `main`, Folder: `/ (root)`
    - Click "Save"
-   - Wait 1-2 minutes, then visit: `https://YOUR_USERNAME.github.io/hypixel-minion-calculator/`
+   - Wait 1-2 minutes, then visit: `https://RyMonrose.github.io/hypixel-minion-calculator/`
 
 ### Method 2: Using Command Line
 
