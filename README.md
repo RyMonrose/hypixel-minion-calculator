@@ -110,7 +110,7 @@ Works in all modern browsers that support:
 2. **Upload Your Files:**
    ```bash
    # Navigate to your project folder
-   cd "F:\1. VS CODE FILES\Hypixel Minon Material cost caculator"
+   cd ""
    
    # Initialize git (if not already done)
    git init
@@ -172,4 +172,5 @@ Potential improvements:
 - Historical price tracking
 - Export results to CSV
 - Comparison between multiple minions
+
 
